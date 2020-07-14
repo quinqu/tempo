@@ -64,6 +64,9 @@
                                 <rect key="frame" x="186.5" y="702" width="41" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="heightNextButtonPressed:" destination="Apz-FX-dJa" eventType="touchUpInside" id="09H-ay-ZYe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iJ-PM-CGr">
                                 <rect key="frame" x="179.5" y="255" width="55" height="28"/>

@@ -23,20 +23,20 @@ class ViewController: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         print("here")
-        let vc = SFSafariViewController(url: URL(string: "http://localhost:3000/auth/spotify")!)
-        present(vc, animated: true)
-        
-        vc.loadViewIfNeeded()
+//        let vc = SFSafariViewController(url: URL(string: "http://localhost:3000/auth/spotify")!)
+//        present(vc, animated: true)
+//
+//        vc.loadViewIfNeeded()
         
 
 //        //if statement
 //        vc.navigationController?.popViewController(animated: true)
 //        vc.dismiss(animated: true, completion: nil)
         
-//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//
-//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "height_vc") as! HeightViewController
-//        self.present(nextViewController, animated:true, completion:nil)
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "height_vc") as! HeightViewController
+        self.present(nextViewController, animated:true, completion:nil)
     }
     
     

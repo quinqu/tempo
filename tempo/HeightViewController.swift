@@ -9,9 +9,9 @@
 import UIKit
 
 class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    var pickerData = ["60", "61", "62","63", "64", "65", "66", "67", "68","69", "70", "71", "72", "73", "74"]
-    // TODO: create another array with value in incches instead for data passing
-
+    var inches = ["60", "61", "62","63", "64", "65", "66", "67", "68","69", "70", "71", "72", "73", "74"]
+   
+    var pickerData = ["5'0","5'1", "5'2","5'3","5'4","5'5","5'6","5'7","5'8","5'9", "5'10", "5'11", "6'0","6'1", "6'2"]
 
     @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
@@ -42,12 +42,14 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         heightLabel.text = "You have selected \(pickerData[row])"
     }
 
-//    
-//    @IBAction func heightNextButtonPressed(_ sender: UIButton) {
-//        performSegue(withIdentifier: "tohomepage", sender: self)
-//    }
     
-    
+    @IBAction func heightNextButtonPressed(_ sender: UIButton) {
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "speed_vc") as! SpeedViewController
+        self.present(nextViewController, animated:true, completion:nil)
+        
+    }
     
     /*
     // MARK: - Navigation
