@@ -9,22 +9,35 @@
 import UIKit
 
 class SpeedViewController: UIViewController {
-
+    var userSpeed = ""
+    @IBOutlet weak var mphTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        mphTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func curatePlaylistButtonPressed(_ sender: UIButton) {
+        //when user presses curate playlist
+        self.userSpeed = mphTextField.text!
+        //user AF to create playlist here
+        //move to new view controller informing the user that their playlist has been created
+        
+        
     }
-    */
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        mphTextField.resignFirstResponder()
+    }
+}
 
+
+extension SpeedViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            mphTextField.resignFirstResponder()
+        return true
+    }
 }
