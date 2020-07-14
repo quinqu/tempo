@@ -10,9 +10,10 @@ import UIKit
 
 class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var pickerData = ["60", "61", "62","63", "64", "65", "66", "67", "68","69", "70", "71", "72", "73", "74"]
+    // TODO: create another array with value in incches instead for data passing
 
 
-
+    @IBOutlet weak var heightLabel: UILabel!
     @IBOutlet weak var picker: UIPickerView!
     
     
@@ -38,13 +39,15 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        heightLabel.text = pickerData[row]
+        heightLabel.text = "You have selected \(pickerData[row])"
     }
 
 //    
 //    @IBAction func heightNextButtonPressed(_ sender: UIButton) {
 //        performSegue(withIdentifier: "tohomepage", sender: self)
 //    }
+    
+    
     
     /*
     // MARK: - Navigation

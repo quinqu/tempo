@@ -33,10 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            sf.navigationController?.popViewController(animated: true)
            sf.dismiss(animated: true, completion: nil)
         }
-        
-      
-          
-        
         return true
     }
 
