@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Alamofire
+
 
 class SpeedViewController: UIViewController {
     var userSpeed = ""
+    var userHeight = -1
+    
     @IBOutlet weak var mphTextField: UITextField!
     
     override func viewDidLoad() {
@@ -24,8 +28,24 @@ class SpeedViewController: UIViewController {
         //when user presses curate playlist
         self.userSpeed = mphTextField.text!
         //user AF to create playlist here
-        //move to new view controller informing the user that their playlist has been created
         
+        
+        //move to new view controller informing the user that their playlist has been created
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "playlistMade_vc") as! PlaylistMadeViewController
+        print(userHeight)
+        
+        
+        // get playlist request
+        print(userSpeed)
+        let queryUrl = "http://localhost:3000/playlist/quinruby?mph=\(userSpeed)&height=\(userHeight)"
+        print(queryUrl)
+        AF.request(queryUrl).response { response in
+            debugPrint(response)
+        }
+        
+        self.present(nextViewController, animated:true, completion:nil)
         
     }
     

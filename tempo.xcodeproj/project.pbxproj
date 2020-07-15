@@ -16,6 +16,7 @@
 		3471397024BD0BAB00DF5075 /* HeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471396F24BD0BAB00DF5075 /* HeightViewController.swift */; };
 		3471397224BD111400DF5075 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397124BD111400DF5075 /* SpeedViewController.swift */; };
 		3471397424BE309D00DF5075 /* PlaylistMadeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397324BE309D00DF5075 /* PlaylistMadeViewController.swift */; };
+		3471397624BE4ED500DF5075 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397524BE4ED500DF5075 /* LoginViewController.swift */; };
 		F59C029B9FCA127B686C3AA0 /* Pods_tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487C25CC155FF488677FAC01 /* Pods_tempo.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		3471396F24BD0BAB00DF5075 /* HeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewController.swift; sourceTree = "<group>"; };
 		3471397124BD111400DF5075 /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		3471397324BE309D00DF5075 /* PlaylistMadeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMadeViewController.swift; sourceTree = "<group>"; };
+		3471397524BE4ED500DF5075 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		487C25CC155FF488677FAC01 /* Pods_tempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 				3471395B24BD082900DF5075 /* AppDelegate.swift */,
 				3471395D24BD082900DF5075 /* SceneDelegate.swift */,
 				3471395F24BD082900DF5075 /* ViewController.swift */,
+				3471397524BE4ED500DF5075 /* LoginViewController.swift */,
 				3471396124BD082900DF5075 /* Main.storyboard */,
 				3471397324BE309D00DF5075 /* PlaylistMadeViewController.swift */,
 				3471397124BD111400DF5075 /* SpeedViewController.swift */,
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3471397624BE4ED500DF5075 /* LoginViewController.swift in Sources */,
 				3471397424BE309D00DF5075 /* PlaylistMadeViewController.swift in Sources */,
 				3471396024BD082900DF5075 /* ViewController.swift in Sources */,
 				3471397224BD111400DF5075 /* SpeedViewController.swift in Sources */,
