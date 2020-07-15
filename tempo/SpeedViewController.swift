@@ -17,8 +17,9 @@ class SpeedViewController: UIViewController {
     @IBOutlet weak var mphTextField: UITextField!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         mphTextField.delegate = self
+        super.viewDidLoad()
+        //mphTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }

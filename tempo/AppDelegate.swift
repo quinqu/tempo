@@ -29,12 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        print("here")
-//        if let sf = safariVC
-//               {
-//           sf.navigationController?.popViewController(animated: true)
-//           sf.dismiss(animated: true, completion: nil)
-//        }
+    
         return true
     }
     
@@ -48,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 
  
+   
 
 
 }

@@ -28,21 +28,24 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         let vc = SFSafariViewController(url: URL(string: "http://localhost:3000/auth/spotify")!)
         present(vc, animated: true)
+    
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             sceneDelegate.safariVC = vc
         }
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "height_vc") as! HeightViewController
-        self.present(nextViewController, animated:true, completion:nil)
-        
+
+        if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+            sceneDelegate.viewController = HeightViewController()
         }
-    
-    
-        
     }
     
 
+        
+    }
+
+
     
+
+  
     
     
     

@@ -13,32 +13,50 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SFSafariViewControllerD
     
     var window: UIWindow?
     var safariVC: SFSafariViewController?
+    var viewController: HeightViewController!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        //guard let _ = (scene as? UIWindowScene) else { return }
+        
+
+
         
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-        print(URLContexts.first!.url)
-        
         if let sf = safariVC
         {
             
             if !URLContexts.isEmpty {
                 sf.navigationController?.popViewController(animated: true)
                 sf.dismiss(animated: true, completion: nil)
-                //call a function here to get height view 
+                //call a function here to get height view
+
+                if let currentRoot = self.window?.rootViewController {
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                    let artificialRoot = storyboard.instantiateViewController(withIdentifier: "height_vc")
+                    currentRoot.present(artificialRoot, animated: false, completion: nil)
+                }
                 
+//                let heightScene = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "height_vc") as! HeightViewController
+//                let appDelegate = (UIApplication.shared.delegate as! SceneDelegate)
+//                appDelegate.window?.rootViewController = heightScene
+                
+//
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let infoViewController = storyboard.instantiateViewController(withIdentifier: "height_vc") as! HeightViewController
+//                infoViewController.modalPresentationStyle = .overCurrentContext
+//                viewController.present(infoViewController, animated: true, completion: nil)
+                
+                
+//                viewController.loginCompleted()
             }
         }
         
     }
-    
-    
     
     
     func sceneDidDisconnect(_ scene: UIScene) {

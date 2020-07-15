@@ -13,15 +13,15 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var index = -1
     var pickerData = ["5'0","5'1", "5'2","5'3","5'4","5'5","5'6","5'7","5'8","5'9", "5'10", "5'11", "6'0","6'1", "6'2"]
     //var userHeight =
-    @IBOutlet weak var heightLabel: UILabel!
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var heightLabel: UILabel?
+    @IBOutlet weak var picker: UIPickerView?
     
     
     override func viewDidLoad() {
         print("hello")
         super.viewDidLoad()
-        picker.delegate = self
-        picker.dataSource = self
+        picker?.delegate = self
+        picker?.dataSource = self
         
         // Do any additional setup after loading the view.
     }
@@ -40,12 +40,13 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         index = row
-        heightLabel.text = "You have selected \(pickerData[row])"
+        heightLabel!.text = "You have selected \(pickerData[row])"
     }
 
     
     @IBAction func heightNextButtonPressed(_ sender: UIButton) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "speed_vc") as! SpeedViewController
         nextViewController.userHeight = inches[index]
         self.present(nextViewController, animated:true, completion:nil)
