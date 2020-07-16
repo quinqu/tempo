@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Artists : Codable {
     var name: String = "" 
 }

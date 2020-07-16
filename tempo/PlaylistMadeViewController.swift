@@ -9,7 +9,11 @@
 import UIKit
 
 class PlaylistMadeViewController: UIViewController {
+    
+    var songs: [Song]?
+    
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

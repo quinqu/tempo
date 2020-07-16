@@ -42,36 +42,14 @@ class SpeedViewController: UIViewController {
         
         URLSession.shared.dataTask(with: queryUrl) { data, _, _ in
             if let data = data {
-                    let songs = try? JSONDecoder().decode([Song].self, from: data)
-                    print(songs)
+                
+                 let songs = try? JSONDecoder().decode([Song].self, from: data)
+                 nextViewController.songs = songs
             }
         }.resume()
         
-        
-        
-        
-        
-        
-//        AF.request(queryUrl).response { response in
-//            //debugPrint(response)
-//            guard let data = response.data else { return }
-//            //var songs = [Songs].self
-//
-//
-//            do {
-//                if let json = try JSONSerialization.jsonObject(with: data) as? [[String: String]] {
-//                    print(json)
-//                    for song in json {
-//                        print(song)
-//                        //let s = Songs(title: song["name"]!, artist: song["artists"]["name"] )
-//                        //songs.append(s)
-//                    }
-//                }
-//            } catch { print(error) }
-//
-//
-//
-//    }
+    
+       
     self.present(nextViewController, animated:true, completion:nil)
 }
     
