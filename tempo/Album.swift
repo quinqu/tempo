@@ -1,5 +1,5 @@
 //
-//  Images.swift
+//  Album.swift
 //  tempo
 //
 //  Created by Quinn Quintero on 7/16/20.
@@ -7,7 +7,6 @@
 //
 
 import Foundation
-struct Images: Codable {
-   var url:String = ""
-
+struct Album: Codable {
+    var images: [Images]
 }

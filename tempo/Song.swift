@@ -11,7 +11,8 @@ import Foundation
 struct Song: Codable {
     var name:String = "" //["name"]
     var artists: [Artists]
-    var images: [Images]
+    var album: Album
+    
     //String = "" //["artists"]["name"] image: ["images"][0]["url"]
     
 }

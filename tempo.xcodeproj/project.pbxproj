@@ -19,6 +19,7 @@
 		3471397C24C0E6D900DF5075 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397B24C0E6D900DF5075 /* Song.swift */; };
 		3471397E24C0E70D00DF5075 /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397D24C0E70D00DF5075 /* Artists.swift */; };
 		3471398024C0E9D900DF5075 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397F24C0E9D900DF5075 /* Images.swift */; };
+		3471398224C0F4A800DF5075 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471398124C0F4A800DF5075 /* Album.swift */; };
 		F59C029B9FCA127B686C3AA0 /* Pods_tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487C25CC155FF488677FAC01 /* Pods_tempo.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		3471397B24C0E6D900DF5075 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		3471397D24C0E70D00DF5075 /* Artists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Artists.swift; path = /Users/quin/developer/capstone/tempo/tempo/Artists.swift; sourceTree = "<absolute>"; };
 		3471397F24C0E9D900DF5075 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		3471398124C0F4A800DF5075 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		487C25CC155FF488677FAC01 /* Pods_tempo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tempo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +83,7 @@
 				3471396124BD082900DF5075 /* Main.storyboard */,
 				3471397324BE309D00DF5075 /* PlaylistMadeViewController.swift */,
 				3471397124BD111400DF5075 /* SpeedViewController.swift */,
+				3471398124C0F4A800DF5075 /* Album.swift */,
 				3471397D24C0E70D00DF5075 /* Artists.swift */,
 				3471397B24C0E6D900DF5075 /* Song.swift */,
 				3471397F24C0E9D900DF5075 /* Images.swift */,
@@ -233,6 +236,7 @@
 				3471397024BD0BAB00DF5075 /* HeightViewController.swift in Sources */,
 				3471395C24BD082900DF5075 /* AppDelegate.swift in Sources */,
 				3471395E24BD082900DF5075 /* SceneDelegate.swift in Sources */,
+				3471398224C0F4A800DF5075 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

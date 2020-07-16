@@ -42,8 +42,8 @@ class SpeedViewController: UIViewController {
         
         URLSession.shared.dataTask(with: queryUrl) { data, _, _ in
             if let data = data {
-                let songs = try? JSONDecoder().decode([Song].self, from: data)
-                print(songs)
+                    let songs = try? JSONDecoder().decode([Song].self, from: data)
+                    print(songs)
             }
         }.resume()
         
