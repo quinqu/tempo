@@ -13,15 +13,12 @@ import Alamofire
 class SpeedViewController: UIViewController {
     var userSpeed = ""
     var userHeight = -1
-    
+    var userId = ""
     @IBOutlet weak var mphTextField: UITextField!
     
     override func viewDidLoad() {
-        mphTextField.delegate = self
         super.viewDidLoad()
-        //mphTextField.delegate = self
-
-        // Do any additional setup after loading the view.
+        mphTextField.delegate = self
     }
     
     
@@ -33,14 +30,18 @@ class SpeedViewController: UIViewController {
         
         //move to new view controller informing the user that their playlist has been created
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-
+        
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "playlistMade_vc") as! PlaylistMadeViewController
         print(userHeight)
         
         
-        // get playlist request
+        if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+            userId = sceneDelegate.spotifyUserId
+            
+        }
+        
         print(userSpeed)
-        let queryUrl = "http://localhost:3000/playlist/quinruby?mph=\(userSpeed)&height=\(userHeight)"
+        let queryUrl = "http://localhost:3000/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)"
         print(queryUrl)
         AF.request(queryUrl).response { response in
             debugPrint(response)
@@ -58,7 +59,7 @@ class SpeedViewController: UIViewController {
 
 extension SpeedViewController : UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            mphTextField.resignFirstResponder()
+        mphTextField.resignFirstResponder()
         return true
     }
 }

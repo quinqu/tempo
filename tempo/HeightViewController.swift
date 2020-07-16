@@ -18,7 +18,6 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     override func viewDidLoad() {
-        print("hello")
         super.viewDidLoad()
         picker?.delegate = self
         picker?.dataSource = self
