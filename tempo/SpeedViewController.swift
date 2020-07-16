@@ -32,23 +32,18 @@ class SpeedViewController: UIViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "playlistMade_vc") as! PlaylistMadeViewController
-        print(userHeight)
-        
-        
+    
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             userId = sceneDelegate.spotifyUserId
-            
         }
         
-        print(userSpeed)
         let queryUrl = "http://localhost:3000/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)"
-        print(queryUrl)
+     
         AF.request(queryUrl).response { response in
             debugPrint(response)
         }
         
         self.present(nextViewController, animated:true, completion:nil)
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
