@@ -20,35 +20,35 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-          
-      }
+        
+    }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        let vc = SFSafariViewController(url: URL(string: "http://localhost:3000/auth/spotify")!)
+        let vc = SFSafariViewController(url: URL(string: "https://tempo-app-api.herokuapp.com/auth/spotify")!)
         present(vc, animated: true)
-    
+        
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             sceneDelegate.safariVC = vc
         }
-
+        
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             sceneDelegate.viewController = HeightViewController()
         }
     }
     
-
-        
-    }
-
-
-    
-
-  
     
     
-    
+}
+
+
+
+
+
+
+
+
 
 
 

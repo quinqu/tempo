@@ -38,7 +38,7 @@ class SpeedViewController: UIViewController {
             userId = sceneDelegate.spotifyUserId
         }
         
-        let queryUrl = URL(string: "http://localhost:3000/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")!
+        let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")!
         
         URLSession.shared.dataTask(with: queryUrl) { data, _, _ in
             if let data = data {
