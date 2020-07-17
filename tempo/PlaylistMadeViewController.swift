@@ -10,13 +10,13 @@ import UIKit
 
 class PlaylistMadeViewController: UIViewController {
     
-    var songs: [Song] = []
+    var songs = [Song]()
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
