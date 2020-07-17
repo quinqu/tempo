@@ -71,29 +71,32 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="856-t3-edI">
                                 <rect key="frame" x="47" y="340" width="320" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL6-XZ-y67">
-                                <rect key="frame" x="186.5" y="702" width="41" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="heightNextButtonPressed:" destination="Apz-FX-dJa" eventType="touchUpInside" id="09H-ay-ZYe"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your height" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3iJ-PM-CGr">
                                 <rect key="frame" x="117.5" y="255" width="179.5" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SL6-XZ-y67">
+                                <rect key="frame" x="152" y="702" width="111" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="heightNextButtonPressed:" destination="Apz-FX-dJa" eventType="touchUpInside" id="09H-ay-ZYe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3iJ-PM-CGr" firstAttribute="centerY" secondItem="Xk7-lN-uXI" secondAttribute="centerY" constant="-179" id="BBv-jI-cPS"/>
                             <constraint firstItem="856-t3-edI" firstAttribute="centerY" secondItem="Xk7-lN-uXI" secondAttribute="centerY" id="VnL-0N-7Hf"/>
+                            <constraint firstItem="SL6-XZ-y67" firstAttribute="centerY" secondItem="Xk7-lN-uXI" secondAttribute="centerY" id="cGh-Pr-b2i"/>
                             <constraint firstItem="3iJ-PM-CGr" firstAttribute="centerX" secondItem="Xk7-lN-uXI" secondAttribute="centerX" id="dB8-un-pj4"/>
+                            <constraint firstItem="SL6-XZ-y67" firstAttribute="centerX" secondItem="Xk7-lN-uXI" secondAttribute="centerX" id="iZr-ms-Q5F"/>
                             <constraint firstItem="856-t3-edI" firstAttribute="centerX" secondItem="Xk7-lN-uXI" secondAttribute="centerX" id="iaX-aS-CmL"/>
-                            <constraint firstItem="SL6-XZ-y67" firstAttribute="centerY" secondItem="Xk7-lN-uXI" secondAttribute="centerY" constant="272" id="u4H-M5-mRi"/>
-                            <constraint firstItem="SL6-XZ-y67" firstAttribute="centerX" secondItem="Xk7-lN-uXI" secondAttribute="centerX" id="ufD-fz-bxQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vZv-yC-lZR"/>
                     </view>
@@ -126,10 +129,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g38-RZ-8My">
-                                <rect key="frame" x="146.5" y="723" width="125" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g38-RZ-8My">
+                                <rect key="frame" x="122" y="724" width="153" height="36"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Curate Playlist"/>
+                                <state key="normal" title="Curate Playlist">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="curatePlaylistButtonPressed:" destination="Fae-Bg-y5f" eventType="touchUpInside" id="nBZ-jw-Xd9"/>
                                 </connections>
@@ -150,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iT-Ev-Jj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1899" y="124"/>
+            <point key="canvasLocation" x="1898.5507246376812" y="123.88392857142857"/>
         </scene>
         <!--Playlist Made View Controller-->
         <scene sceneID="Wbd-W9-QPQ">
