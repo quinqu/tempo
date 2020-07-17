@@ -10,7 +10,7 @@ import UIKit
 
 class PlaylistMadeViewController: UIViewController {
     
-    var songs: [Song]?
+    var songs: [Song] = []
     
 
     
