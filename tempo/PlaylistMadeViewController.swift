@@ -47,14 +47,6 @@ extension PlaylistMadeViewController: UITableViewDataSource {
               print("Error: \(error)")
           }
         }
-//        ge(with: imageURL, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, URL) in
-//            cell.setNeedsLayout()
-//        })
-//
-   
-        //cell.imageView?.kf.setImage(with: imageURL)
-  
-
         return cell
     }
 }
