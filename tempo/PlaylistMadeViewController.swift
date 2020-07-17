@@ -17,7 +17,6 @@ class PlaylistMadeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
     }
@@ -25,11 +24,6 @@ class PlaylistMadeViewController: UIViewController {
 
 }
 
-extension PlaylistMadeViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("idk")
-    }
-}
 extension PlaylistMadeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -39,8 +33,9 @@ extension PlaylistMadeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = songs[indexPath.row].name
+        //cell.textLabel?.textColor = UIColor.white
         cell.detailTextLabel?.text = songs[indexPath.row].artists[0].name
-        
+        //cell.textLabel?.textColor = UIColor.white
         let imageURL = URL(string: songs[indexPath.row].album.images[0].url)
         cell.imageView?.kf.setImage(with: imageURL) 
   
