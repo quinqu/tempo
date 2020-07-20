@@ -21,7 +21,19 @@ class PlaylistMadeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func openSpotify(_ sender: UIButton) {
+        let spotify = "spotify:user:quinruby"
+        let spotifyUrl = NSURL(string: spotify)
+        if UIApplication.shared.canOpenURL(spotifyUrl! as URL)
+        {
+            UIApplication.shared.open(spotifyUrl! as URL, options: [:], completionHandler: nil)
 
+         } else {
+            //redirect to safari because the user doesn't have Instagram
+            UIApplication.shared.open(NSURL(string: "http://spotify.com/")! as URL, options: [:], completionHandler: nil)
+        }
+    }
+    
 }
 
 extension PlaylistMadeViewController: UITableViewDataSource {
@@ -35,7 +47,7 @@ extension PlaylistMadeViewController: UITableViewDataSource {
         cell.textLabel?.text = songs[indexPath.row].name
         cell.textLabel?.textColor = UIColor.white
         cell.detailTextLabel?.text = songs[indexPath.row].artists[0].name
-        cell.textLabel?.textColor = UIColor.white
+        cell.detailTextLabel?.textColor = UIColor.white
         let imageURL = URL(string: songs[indexPath.row].album.images[0].url)
         cell.imageView?.kf.setImage(with: imageURL) { result in
             cell.setNeedsLayout() //invalidate current layout
@@ -49,4 +61,8 @@ extension PlaylistMadeViewController: UITableViewDataSource {
         }
         return cell
     }
+    
+    
+    
+    
 }

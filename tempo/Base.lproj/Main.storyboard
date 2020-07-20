@@ -137,7 +137,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your running speed (mph)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7O-eC-eIe">
-                                <rect key="frame" x="51" y="241" width="313" height="27.5"/>
+                                <rect key="frame" x="50.5" y="241" width="313" height="27.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -172,15 +172,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check the Spotify app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agX-fE-NdK">
-                                <rect key="frame" x="110.5" y="237" width="193" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for using Tempo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2Z-DF-3bZ">
-                                <rect key="frame" x="103" y="765" width="208" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for using Tempo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agX-fE-NdK">
+                                <rect key="frame" x="91.5" y="237.5" width="231" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -188,6 +182,7 @@
                                 <rect key="frame" x="46" y="283" width="322" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -223,14 +218,26 @@
                                 <rect key="frame" x="87" y="596" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-99-34c">
+                                <rect key="frame" x="128" y="763.5" width="158" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Open the Spotify app? ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="openSpotify:" destination="pW7-P4-ewt" eventType="touchUpInside" id="fVK-in-ZVU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="dzr-99-34c" firstAttribute="centerX" secondItem="A3L-a7-wHa" secondAttribute="centerX" id="9CS-HG-QLy"/>
+                            <constraint firstItem="dzr-99-34c" firstAttribute="centerY" secondItem="A3L-a7-wHa" secondAttribute="centerY" constant="329.5" id="I8O-0r-n5e"/>
                             <constraint firstItem="agX-fE-NdK" firstAttribute="centerY" secondItem="A3L-a7-wHa" secondAttribute="centerY" constant="-199" id="Jfd-xG-zLE"/>
                             <constraint firstItem="kch-Jh-TQb" firstAttribute="centerX" secondItem="A3L-a7-wHa" secondAttribute="centerX" id="Lem-qL-OE2"/>
-                            <constraint firstItem="h2Z-DF-3bZ" firstAttribute="centerY" secondItem="A3L-a7-wHa" secondAttribute="centerY" constant="327.5" id="ddI-O3-nh2"/>
+                            <constraint firstItem="dzr-99-34c" firstAttribute="centerX" secondItem="A3L-a7-wHa" secondAttribute="centerX" id="R8b-zg-g8S"/>
+                            <constraint firstItem="dzr-99-34c" firstAttribute="centerY" secondItem="A3L-a7-wHa" secondAttribute="centerY" constant="330.5" id="c9v-ce-wSE"/>
                             <constraint firstItem="kch-Jh-TQb" firstAttribute="centerY" secondItem="A3L-a7-wHa" secondAttribute="centerY" constant="-249" id="gWi-mo-EVl"/>
-                            <constraint firstItem="h2Z-DF-3bZ" firstAttribute="centerX" secondItem="A3L-a7-wHa" secondAttribute="centerX" id="hbw-bA-z0Q"/>
                             <constraint firstItem="agX-fE-NdK" firstAttribute="centerX" secondItem="A3L-a7-wHa" secondAttribute="centerX" id="npa-YJ-gQ0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MfN-Rp-aaP"/>
