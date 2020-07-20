@@ -15,6 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SFSafariViewControllerD
     var safariVC: SFSafariViewController?
     var viewController: HeightViewController!
     var spotifyUserId = ""
+    var spotifyUserURI = ""
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -33,7 +34,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SFSafariViewControllerD
             if !URLContexts.isEmpty {
                 //getting user ID
                 let idk = URLContexts.first!.url
-                spotifyUserId = idk.absoluteString.components(separatedBy: "//")[1]
+                //"heightscheme://spotify:user:quinruby"
+                spotifyUserURI = idk.absoluteString.components(separatedBy: "//")[1]
+                print(spotifyUserURI)
+                spotifyUserId = idk.absoluteString.components(separatedBy: ":")[3]
+                print(spotifyUserId)
                 
                 //closing safari view controller
                 sf.navigationController?.popViewController(animated: true)

@@ -13,7 +13,7 @@ import Kingfisher
 class PlaylistMadeViewController: UIViewController {
     var songs = [Song]()
     @IBOutlet var tableView: UITableView!
-
+    var userURI = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +23,10 @@ class PlaylistMadeViewController: UIViewController {
     
     @IBAction func openSpotify(_ sender: UIButton) {
         //TODO: fix string literal
-        let spotify = "spotify:user:quinruby"
-        let spotifyUrl = NSURL(string: spotify)
+       if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                 userURI = sceneDelegate.spotifyUserURI
+             }
+        let spotifyUrl = NSURL(string: userURI)
         if UIApplication.shared.canOpenURL(spotifyUrl! as URL)
         {
             UIApplication.shared.open(spotifyUrl! as URL, options: [:], completionHandler: nil)
