@@ -24,7 +24,7 @@ class PlaylistMadeViewController: UIViewController {
     @IBAction func openSpotify(_ sender: UIButton) {
         //TODO: fix string literal
        if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
-                 userURI = sceneDelegate.spotifyUserURI
+                 userURI = "spotify:user:\(sceneDelegate.spotifyUserId)"
              }
         let spotifyUrl = NSURL(string: userURI)
         if UIApplication.shared.canOpenURL(spotifyUrl! as URL)
