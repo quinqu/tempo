@@ -33,9 +33,6 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return pickerData.count
     }
     
-//    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-//        pickerData[row]
-//    }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         return NSAttributedString(string: pickerData[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
@@ -55,14 +52,6 @@ class HeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.present(nextViewController, animated:true, completion:nil)
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

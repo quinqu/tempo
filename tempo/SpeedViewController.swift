@@ -10,16 +10,36 @@ import UIKit
 import Alamofire
 
 
-class SpeedViewController: UIViewController {
+class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var userSpeed = ""
     var userHeight = -1
     var userId = ""
- 
+    var pickerData = ["miles/hour", "kilometers/hour", "minutes/mile"]
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        return NSAttributedString(string: pickerData[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
+    }
+    
+    
+
+
+    @IBOutlet weak var picker: UIPickerView!
+    
     @IBOutlet weak var mphTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         mphTextField.delegate = self
+        picker!.delegate = self
+        picker!.dataSource = self
     }
     
     
@@ -35,7 +55,7 @@ class SpeedViewController: UIViewController {
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             userId = sceneDelegate.spotifyUserId
         }
-        
+        //if statment here
         let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")
         
         guard queryUrl != nil else {
@@ -76,9 +96,6 @@ class SpeedViewController: UIViewController {
 
     }
 }
-
-
-
 
 
 extension SpeedViewController : UITextFieldDelegate {
