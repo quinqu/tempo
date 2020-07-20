@@ -22,6 +22,7 @@ class PlaylistMadeViewController: UIViewController {
     }
     
     @IBAction func openSpotify(_ sender: UIButton) {
+        //TODO: fix string literal
         let spotify = "spotify:user:quinruby"
         let spotifyUrl = NSURL(string: spotify)
         if UIApplication.shared.canOpenURL(spotifyUrl! as URL)
