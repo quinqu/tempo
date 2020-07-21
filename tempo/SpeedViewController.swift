@@ -13,8 +13,11 @@ import Alamofire
 class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     var userSpeed = ""
     var userHeight = -1
+    var index = -1
     var userId = ""
     var pickerData = ["miles/hour", "kilometers/hour", "minutes/mile"]
+    var metrics = ["mph", "kph", "mpm"]
+    var selectedMetric = ""
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -28,6 +31,9 @@ class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         return NSAttributedString(string: pickerData[row], attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        index = row
+    }
     
 
 
@@ -45,17 +51,12 @@ class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBAction func curatePlaylistButtonPressed(_ sender: UIButton) {
         //when user presses curate playlist
-        self.userSpeed = mphTextField.text!
-        //user AF to create playlist here
-        
-        
-        //move to new view controller informing the user that their playlist has been created
-
+        self.userSpeed = mphTextField.text!        
         
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
             userId = sceneDelegate.spotifyUserId
         }
-        //if statment here
+        // TODO: if statment here for metrics
         let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")
         
         guard queryUrl != nil else {
