@@ -17,14 +17,16 @@ class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var userId = ""
     var pickerData = ["miles/hour", "kilometers/hour", "minutes/mile"]
     var metrics = ["mph", "kph", "mpm"]
-    var selectedMetric = ""
+    
+    @IBOutlet weak var speedLabel: UILabel!
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        pickerData.count
+        return pickerData.count
     }
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -33,6 +35,8 @@ class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         index = row
+        speedLabel!.text = "\(pickerData[row])"
+        print(index)
     }
     
 
@@ -57,7 +61,9 @@ class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             userId = sceneDelegate.spotifyUserId
         }
         // TODO: if statment here for metrics
-        let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")
+       // let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")
+        print(metrics[index])
+          let queryUrl = URL(string: "https://tempo-app-api/playlist/\(userId)?metric=\(metrics[index])&speed=\(userSpeed)&height=\(userHeight)")
         
         guard queryUrl != nil else {
             return

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Assets.xcassets">
+   </FileRef>
+   <FileRef
       location = "group:tempo.xcodeproj">
    </FileRef>
    <FileRef

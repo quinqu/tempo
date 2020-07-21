@@ -37,15 +37,14 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-HO-K8C">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldV-HO-K8C">
                                 <rect key="frame" x="37.666666666666657" y="595" width="299.66666666666674" height="66"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="66" id="vyD-Og-kGp"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="6"/>
-                                <state key="normal" backgroundImage="image-asset">
+                                <state key="normal" image="connect">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -185,6 +184,7 @@
                     <connections>
                         <outlet property="mphTextField" destination="heB-jA-boL" id="z4i-iJ-lgL"/>
                         <outlet property="picker" destination="0kl-Q5-dNX" id="Eeo-rK-xjT"/>
+                        <outlet property="speedLabel" destination="b7O-eC-eIe" id="bla-eM-dH1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2iT-Ev-Jj9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -299,7 +299,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="image-asset" width="806" height="141"/>
-        <image name="waves" width="236" height="418"/>
+        <image name="connect" width="806" height="141"/>
+        <image name="waves" width="423" height="750"/>
     </resources>
 </document>
