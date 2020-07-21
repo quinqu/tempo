@@ -19,6 +19,7 @@
 		3471397E24C0E70D00DF5075 /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397D24C0E70D00DF5075 /* Artists.swift */; };
 		3471398024C0E9D900DF5075 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471397F24C0E9D900DF5075 /* Images.swift */; };
 		3471398224C0F4A800DF5075 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3471398124C0F4A800DF5075 /* Album.swift */; };
+		3471398E24C7533D00DF5075 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3471398D24C7495800DF5075 /* Assets.xcassets */; };
 		F59C029B9FCA127B686C3AA0 /* Pods_tempo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 487C25CC155FF488677FAC01 /* Pods_tempo.framework */; };
 /* End PBXBuildFile section */
 
@@ -174,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3471396824BD082C00DF5075 /* LaunchScreen.storyboard in Resources */,
+				3471398E24C7533D00DF5075 /* Assets.xcassets in Resources */,
 				3471396324BD082900DF5075 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

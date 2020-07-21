@@ -44,7 +44,7 @@
                                 </constraints>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <inset key="contentEdgeInsets" minX="30" minY="15" maxX="30" maxY="6"/>
-                                <state key="normal" image="connect">
+                                <state key="normal" backgroundImage="connect">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
