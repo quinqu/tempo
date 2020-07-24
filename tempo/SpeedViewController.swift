@@ -63,7 +63,7 @@ class SpeedViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // TODO: if statment here for metrics
        // let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?mph=\(userSpeed)&height=\(userHeight)")
         print(metrics[index])
-          let queryUrl = URL(string: "https://tempo-app-api/playlist/\(userId)?metric=\(metrics[index])&speed=\(userSpeed)&height=\(userHeight)")
+          let queryUrl = URL(string: "https://tempo-app-api.herokuapp.com/playlist/\(userId)?metric=\(metrics[index])&speed=\(userSpeed)&height=\(userHeight)")
         
         guard queryUrl != nil else {
             return

@@ -26,7 +26,7 @@ class ViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
-        let vc = SFSafariViewController(url: URL(string: "https://tempo-app-api/auth/spotify")!)
+        let vc = SFSafariViewController(url: URL(string: "https://tempo-app-api.herokuapp.com/auth/spotify")!)
         present(vc, animated: true)
         
         if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
